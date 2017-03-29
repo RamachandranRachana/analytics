@@ -1,0 +1,1 @@
+Code implements how Auto-encoder work using keras using the MNIST dataset
