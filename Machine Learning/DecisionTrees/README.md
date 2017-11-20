@@ -1,21 +1,18 @@
-In this task you will implement decision trees and decision forests. Your program will learn decision trees from training data and will apply decision trees and decision forests to classify test objects.
-Your zip file should have a folder called decision_trees, which contains your code and the README.txt file.
-
+The program implements decision trees and decision forests. The program will learn decision trees from training data and will apply decision trees and decision forests to classify test objects.
 Command-line Arguments
-
-Your program will be invoked as follows:
+Program will be invoked as follows:
 dtree <training_file> <test_file> <option> <pruning_thr>
 The arguments provide to the program the following information:
 The first argument, <training_file>, is the path name of the training file, where the training data is stored. The path name can specify any file stored on the local computer.
 The second argument, <test_file>, is the path name of the test file, where the test data is stored. The path name can specify any file stored on the local computer.
 The third argument, <option>, can have four possible values: optimized, randomized, forest3, or forest15. It specifies how to train (learn) the decision tree, and will be discussed later.
 The fourth argument,<pruning_thr>, is a number greater than or equal to 0, that specifies the pruning threshold.
-The training and test files will follow the same format as the text files in the UCI datasets directory. A description of the datasets and the file format can be found on this link. For each dataset, a training file and a test file are provided. The name of each file indicates what dataset the file belongs to, and whether the file contains training or test data. Your code should also work with ANY OTHER training and test files using the same format as the files in the UCI datasets directory.
+The training and test files will follow the same format as the text files in the UCI datasets directory. 
 As the description states, do NOT use data from the last column (i.e., the class labels) as features. In these files, all columns except for the last one contain example inputs. The last column contains the class label.
 
 Training Stage
 
-The first thing that your program should do is train a decision tree or a decision forest using the training data. What you train and how you do the training depends on the came of the third command line argument, that we called <option>. This option can take four possible values, as follows:
+The first thing that the program should do is train a decision tree or a decision forest using the training data. What you train and how you do the training depends on the came of the third command line argument, that we called <option>. This option can take four possible values, as follows:
 optimized: in this case, at each non-leaf node of the tree (starting at the root) you should identify the optimal combination of attribute (feature) and threshold, i.e., the combination that leads to the highest information gain for that node.
 randomized: in this case, at each non-leaf node of the tree (starting at the root) you should choose the attribute (feature) randomly. The threshold should still be optimized, i.e., it should be chosen so as to maximize the information gain for that node and for that randomly chosen attribute.
 forest3: in this case, your program trains a random forest containing three trees. Each of those trees should be trained as discussed under the "randomized" option.
