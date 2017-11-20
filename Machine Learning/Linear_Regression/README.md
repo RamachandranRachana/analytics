@@ -12,6 +12,8 @@ The path name can specify any file stored on the local computer.
 This is the value of ? that is used for regularization. If ? = 0, then no regularization is done.
 
 The training data is of the format as in sample_data1.txt
+## Linear model 
+![image](https://user-images.githubusercontent.com/26680128/33006414-e7ab0c60-cd8f-11e7-89a0-ea223ad44811.png)
 
 ## The weight without regulalirization can be computed using
 ![image](https://user-images.githubusercontent.com/26680128/32998471-f18611be-cd60-11e7-818c-52ef06d7d816.png)
